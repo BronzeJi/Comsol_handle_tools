@@ -1,6 +1,6 @@
 # Comsol_handle_tools
 
-Implementation files for deepoNet acoustics field training
+Implementation files for DeepONet acoustics field training
 Training data generated from Comsol 6.2
 
 - Random sound sources generator
@@ -9,5 +9,5 @@ Training data generated from Comsol 6.2
 - Physics parameters definition
 
 
-Pressure slice from Comsol study
+Pressure slice from the Comsol study
 ![slidepressure](https://github.com/user-attachments/assets/101110a2-7360-47cd-83e4-5033d1524052)
