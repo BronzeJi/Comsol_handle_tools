@@ -6,3 +6,5 @@ Training data generated from Comsol 6.2
 - Random sound sources generator
 - Comsol mesh and pressure data to the HDF5 file handler
 - Physics parameters definition
+
+![slidepressure](https://github.com/user-attachments/assets/101110a2-7360-47cd-83e4-5033d1524052)
