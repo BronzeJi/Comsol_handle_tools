@@ -16,7 +16,7 @@ import glob
 
 
 
-pathname="/Users/elliot/Documents/Research_assistant/code/test_data/test512/"
+pathname="pathyouwish"
 
 #df = pd.read_csv(pathname+'pressure_512_2.csv')
 
@@ -27,7 +27,7 @@ files=glob.glob(pathname+"comsol_data/Pressure_*.csv")
 positions = []
 j=1
 
-with open(pathname+"comsol_sweep_parameters_formatted.txt", "r") as f:
+with open(pathname+"comsol_sweep_source.txt", "r") as f:
     lines = f.readlines()
 
 # Split each line and ignore the first item (parameter name)
@@ -74,8 +74,6 @@ for file in files:
         umesh_com = coordinates.iloc[index].reset_index(drop=True)
         
         
-        # 1) Open (or create) an HDF5 file in “write” mode.
-        #    'w' = create file, truncate if exists.
         with h5py.File(pathname+'hdf5_data/train_'+str(j)+'.h5', 'w') as h5file:
             j=j+1
         
@@ -126,11 +124,11 @@ for file in files:
                 dtype='float16'
             )
         
-            # 4) Add metadata (attributes) to files, groups, or datasets.
-            #h5file.attrs['creator'] = 'Alice'
+            
+           
             dset_2.attrs['time_steps'] = time_steps
             dset_4.attrs['umesh_shape']= ushape
     print("Extracted from"+file)
         
 
-# When the with-block exits, the file is automatically closed.
+
